@@ -101,3 +101,38 @@ let assinante = "true";
 let valorCompra2 = 215;
 let desconto = assinante === "true" || valorCompra2 > 200 ? "Desconto aplicado" : "Sem desconto";
 console.log(desconto);
+
+//18 - ACESSO RESTRITO
+let idadeJogador = 18;
+let contaAtiva = true;
+let banido = false;
+let acesso = idadeJogador >= 10 && contaAtiva && !banido ? "Acesso permitido" : "Acesso negado";
+console.log(acesso);
+
+//DESAFIOS COMBINADOS
+
+//19 - PAR E DENTRO DO INTERVALO
+let numer0 = 12;
+let resultadoNumer0 = numer0 % 2 === 0 && numer0 >=1 && numer0 <=100 ? "Número é par e está dentro do intervalo" : "Número é ímpar ou está fora do intervalo";
+console.log(resultadoNumer0);
+
+//20 - CLASSIFICAÇÃO DE NOTA
+let notaAluno = 5.9;
+let classificacao = notaAluno < 5 ? "reprovado" : notaAluno >= 5 && notaAluno < 7 ? "recuperação" : notaAluno >= 7 && notaAluno < 9 ? "aprovado" : "Excelete";
+console.log(classificacao);
+
+//21 - CALCULADORA DE IMC
+let peso = 53;
+let altura = 1.64;
+let imc = peso / (altura * altura);
+let classificacaoIMC = imc < 18.5 ? "Abaixo do peso" : imc >= 18.5 && imc < 24.9 ? "Peso normal" : imc >= 24.9 && imc < 29.9 ? "Sobrepeso" : "Obesidade";
+console.log(imc.toFixed(2));
+console.log(classificacaoIMC);
+
+//22 - JOGO DE ADIVINHAR O NÚMERO
+let numeroSecreto = 7;
+let chute = 5;
+let resultadoChute = chute === numeroSecreto ? "Parabéns! Você acertou o número secreto!" : chute < numeroSecreto ? "Tente um número maior!" : "Tente um número menor!";
+console.log(resultadoChute);
+
+//Foi legal fazer issooo!!
