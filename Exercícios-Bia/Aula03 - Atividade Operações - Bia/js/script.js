@@ -4,6 +4,9 @@
 let primeiroNumero = 10;
 let segundoNumero = 24;
 console.log(primeiroNumero+segundoNumero);
+console.log(primeiroNumero-segundoNumero);
+console.log(primeiroNumero*segundoNumero);
+console.log(primeiroNumero/segundoNumero);
 
 //12 -SOBRA
 let numero = 34;
@@ -21,16 +24,15 @@ console.log(profundidade*profundidade);
 let celsius = 23;
 let fr = ((celsius*(9/5)+32));
 console.log(fr);
-//ou
-console.log((celsius*(9/5)+32));
 
 //5 - MÉDIA
-let nota1 = 8;
-let nota2 = 9.20;
+let nota1 = 4;
+let nota2 = 9.5;
 let nota3 = 10;
 
 let media = ((nota1+nota2+nota3)/3);
 console.log(media.toFixed(2));
+
 
 //6 - TROCO
 let valorProduto = 46;
@@ -122,8 +124,8 @@ let classificacao = notaAluno < 5 ? "reprovado" : notaAluno >= 5 && notaAluno < 
 console.log(classificacao);
 
 //21 - CALCULADORA DE IMC
-let peso = 53;
-let altura = 1.64;
+let peso = 70;
+let altura = 1.70;
 let imc = peso / (altura * altura);
 let classificacaoIMC = imc < 18.5 ? "Abaixo do peso" : imc >= 18.5 && imc < 24.9 ? "Peso normal" : imc >= 24.9 && imc < 29.9 ? "Sobrepeso" : "Obesidade";
 console.log(imc.toFixed(2));
@@ -136,3 +138,74 @@ let resultadoChute = chute === numeroSecreto ? "Parabéns! Você acertou o núme
 console.log(resultadoChute);
 
 //Foi legal fazer issooo!!
+
+function calculadora (x,b){
+somar = x+b
+console.log(somar)
+}
+
+calculadora(125,5)
+
+function calcularIMC (p,a){
+    calculo2 = p/(a*a)
+    console.log(calculo2.toFixed(2))
+}
+ calcularIMC (54,1.64)
+ calcularIMC (peso,altura)
+
+let numberPeso = Number(prompt("Qual o seu Peso?"));
+let numberAltura = Number(prompt("Qual a sua Altura?"));
+let numberimc = numberPeso / (numberAltura * numberAltura);
+console.log(numberimc.toFixed(2));
+alert(numberimc.toFixed(2));
+if (numberimc < 18.5){
+    alert("Abaixo do peso")
+} else if (numberimc >= 18.5){
+    alert("Peso Normal")}
+if (numberimc > 24.9){
+    alert("Sobrepeso")
+}else if (numberimc >29.9){
+    alert("Obesidade")
+    }
+calcularIMC()
+
+
+ let aluno = true
+ if(aluno == true){
+    console.log("Presença")
+ }else{
+    console.log("Falta")
+ }
+
+function situacaoAluno() {
+    let nota4 = Number(prompt("informe a primeira nota"))
+    let nota5 = Number(prompt("informe a segunda nota"))
+    let nota6 = Number(prompt("informe a terceira nota"))
+    let mediaTotal = ((nota4+nota5+nota6)/3);
+
+    if (mediaTotal <6) {
+    alert("Aluno Reprovado")
+    } else if (mediaTotal >= 6 && mediaTotal <7) {
+    alert("Aluno de Exame")
+    } else{
+    alert("Aluno Aprovado")
+}}
+ situacaoAluno()
+
+ function clasifianota(){
+    let nota10 =Number(prompt("Informe sua nota: "))
+    if(nota10 >= 0 && nota10 <=10){
+        if(nota10 >=9){
+            alert("Excelente")
+        }else if (nota10 >=7){
+            alert("Aprovado")
+        }else if (nota10 <7){
+            alert("Recuperação")
+        }else{
+            alert("Reprovado")
+        }
+    }else{
+        alert("Nota inválida")
+    }
+ }
+clasifianota()
