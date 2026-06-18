@@ -79,5 +79,32 @@ for(let m = 0; m < playlist.length; m++){
     console.log(playlist[7]);
 }
 
+//FILMES
+let filme = [
+    "filme 1",
+    "filme 2",
+    "filme 3",
+    "filme 4",
+    "filme 5",
+]
+for(let f = 0; f < filme.length; f++){
+    console.log(filme[f]);
+}
+
+//NOTAS
+let notas = [7, 8, 10, 5]
+let soma = 0
+for(let n = 0; n < notas.length; n++){
+    soma = soma+notas[n]
+}
+alert("Valor total: "+ soma)
+
+let  media = soma/notas.length
+alert("Média das notas: "+ media)
+
+//PREÇOS
+let precos = [10.50, 25.00, 8.99, 12.75]
+let menor = Number(Math.min(...precos));
+alert("Valor menor:"+menor)
 
 
