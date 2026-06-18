@@ -1,6 +1,6 @@
-//Lista de Exercícios - Estruturas Condicionais
+//Lista de Exercícios - Estruturas Condicionais/
 
-//1. Maior entre dois números. Faça um programa que peça dois números e imprima o maior deles.
+/*1. Maior entre dois números. Faça um programa que peça dois números e imprima o maior deles.
 let numero1 = Number(prompt("Digite o primeiro número: "))
 let numero2 = Number(prompt("Digite o segundo número: "))
 
@@ -10,33 +10,32 @@ if(numero1 > numero2){
     alert(numero2)
 }
 
-//*2. Número positivo ou negativo. Faça um programa que peça um valor e mostre na tela se o valor é positivo ou negativo.
+2. Número positivo ou negativo. Faça um programa que peça um valor e mostre na tela se o valor é positivo ou negativo.
 let numeroPar = Number(prompt("Digite um número aqui: "))
 
 let ImparPar = numeroPar%2 === 0 ? "Número Par" : "Número Ímpar";
 alert(ImparPar)
 
-//*3. Identificação de sexo. Faça um programa que verifique se uma letra digitada é **"F"** ou **"M"**.
+3. Identificação de sexo. Faça um programa que verifique se uma letra digitada é **"F"** ou **"M"**.
 let femMasc = prompt("Digite F para feminino ou M para Masculino")
-
-if (femMasc === "F"){
-    alert("Feminino")
-}else if(femMasc === "M"){
-    alert("Masculino")
-}else{
-    alert("Sexo inválido")
+switch(femMasc){
+    case "F": alert("Feminino")
+    break
+    case "M": alert("Maculino")
+    break
+    default: alert("Sexo inválido")
 }
 
-/**4. Vogal ou consoante. Faça um programa que verifique se uma letra digitada é vogal ou consoante. */
+4. Vogal ou consoante. Faça um programa que verifique se uma letra digitada é vogal ou consoante. 
 let letra = prompt("Digite uma letra:")
 let vogCons = letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u" ? "Vogal" : "Consoante";
 alert(vogCons)
 
-/** Faça um programa para a leitura de duas notas parciais de um aluno.
+ Faça um programa para a leitura de duas notas parciais de um aluno.
 Exiba:
 - **Aprovado**, se a média for maior ou igual a 7;
 - **Aprovado com Distinção**, se a média for igual a 10;
-- **Reprovado**, se a média for menor que 7.*/
+- **Reprovado**, se a média for menor que 7.
 
 let nota1 = Number(prompt("Digite a primeira nota: "))
 let nota2 = Number(prompt("Digite a segunda nota: "))       
@@ -50,8 +49,8 @@ else{
     alert("Reprovado")
 }
 
-/**6. Maior de três números
-Faça um programa que leia três números e mostre o maior deles. */
+6. Maior de três números
+Faça um programa que leia três números e mostre o maior deles.
 let num1 = Number(prompt("Digite o primeiro número: "))
 let num2 = Number(prompt("Digite o segundo número: "))
 let num3 = Number(prompt("Digite o terceiro número: "))
@@ -59,15 +58,15 @@ let maior = num1 > num2 && num1 > num3 ? num1 : num2 > num1 && num2 > num3 ? num
 alert("O maior número é: " + maior)
 
 
-/**## 7. Maior e menor de três números
+## 7. Maior e menor de três números
 Faça um programa que leia três números e mostre o maior e o menor deles. */
 
 let numeroA = Number(prompt("Digite o primeiro número: "))
 let numeroB = Number(prompt("Digite o segundo número: "))
 let numeroC = Number(prompt("Digite o terceiro número: "))  
-let maiorNum = numeroA > numeroB && numeroA > numeroC ? numeroA : numeroB > numeroA && numeroB > numeroC ? numeroB : numeroC;
-let menorNum = numeroA < numeroB && numeroA < numeroC ? numeroA : numeroB < numeroA && numeroB < numeroC ? numeroB : numeroC;
-alert("O maior número é: " + maiorNum + " e o menor número é: " + menorNum)
+let maiorNum5 = numeroA > numeroB && numeroA > numeroC ? numeroA : numeroB > numeroA && numeroB > numeroC ? numeroB : numeroC;
+let menorNum5 = numeroA < numeroB && numeroA < numeroC ? numeroA : numeroB < numeroA && numeroB < numeroC ? numeroB : numeroC;
+alert("O maior número é: " + maiorNum5 + " e o menor número é: " + menorNum5)
 
 
 /**## 8. Produto mais barato
@@ -297,9 +296,9 @@ if (a === 0){
 
 /**17. Ano bissexto
 Faça um programa que leia um ano e informe se ele é ou não bissexto. */
-let ano = Number(prompt("Digite um ano: "))
-let bissexto = (ano % 4 === 0 && ano % 100 !== 0) || (ano % 400 === 0) ? "Bissexto" : "Não é bissexto";
-alert("O ano " + ano + " é: " + bissexto)
+let ano1 = Number(prompt("Digite um ano: "))
+let bissexto = (ano1 % 4 === 0 && ano % 100 !== 0) || (ano1 % 400 === 0) ? "Bissexto" : "Não é bissexto";
+alert("O ano " + ano1 + " é: " + bissexto)
 
 
 /**18. Par ou ímpar
@@ -364,16 +363,16 @@ Faça um programa que receba três números inteiros e informe qual deles é o m
 let numero11 = Number(prompt("Digite o primeiro número: "))
 let numero22 = Number(prompt("Digite o segundo número: "))
 let numero33 = Number(prompt("Digite o terceiro número: "))
-let maiorNum = numero11 > numero22 && numero11 > numero33 ? numero11 : numero22 > numero11 && numero22 > numero33 ? numero22 : numero33;
-let menorNum = numero11 < numero22 && numero11 < numero33 ? numero11 : numero22 < numero11 && numero22 < numero33 ?numero22 :numero33;
-alert("O maior número é: " + maiorNum + " e o menor número é: " + menorNum) 
+let maiorNum2 = numero11 > numero22 && numero11 > numero33 ? numero11 : numero22 > numero11 && numero22 > numero33 ? numero22 : numero33;
+let menorNum2 = numero11 < numero22 && numero11 < numero33 ? numero11 : numero22 < numero11 && numero22 < numero33 ?numero22 :numero33;
+alert("O maior número é: " + maiorNum2 + " e o menor número é: " + menorNum2) 
 
 
 /**23. Par ou ímpar em C
 Escreva um programa em C que receba um número inteiro e diga se ele é par ou ímpar.
 > Dica: utilize o operador `%`.*/
-let numeroC = Number(prompt("Digite um número inteiro: "))
-let parImparC = numeroC % 2 === 0 ? "Par" : "Ímpar";
+let numeroCC = Number(prompt("Digite um número inteiro: "))
+let parImparC = numeroCC % 2 === 0 ? "Par" : "Ímpar";
 alert("O número é: " + parImparC)
 
 
@@ -418,8 +417,8 @@ Caso não seja válida, informe o motivo.
 - O ano atual é 2013. */
 let diaData = Number(prompt("Digite o dia: "))
 let mes = Number(prompt("Digite o mês: "))
-let ano = Number(prompt("Digite o ano: "))
-let dataValida = diaData >= 1 && diaData <= 31 && mes >= 1 && mes <= 12 && ano === 2013 ? "Data válida" : "Data inválida";
+let anoo = Number(prompt("Digite o ano: "))
+let dataValida = diaData >= 1 && diaData <= 31 && mes >= 1 && mes <= 12 && anoo === 2013 ? "Data válida" : "Data inválida";
 alert(dataValida)   
 
 /**27. Troca de valores
