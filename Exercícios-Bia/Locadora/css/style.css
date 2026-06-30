@@ -1,0 +1,186 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --cor-primaria: #f5f4f1;
+    --cor-secundaria: #241f53;
+    --fundo-gradient: #3d3582;
+    --gradient: radial-gradient(circle,rgba(61, 53, 130, 1) 0%, rgba(54, 38, 120, 1) 35%, rgba(17, 28, 46, 1) 100%);
+    --radius: 3px;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.664);
+}
+
+body.dark-mode {
+  --cor-secundaria: #f5f4f1;
+  --cor-primaria: #241f53;
+  --gradient: #f5f4f1;
+  --fundo-gradient: #f5f4f1;
+}
+
+body{
+    background: var(--gradient)  ;
+    background-color: var(--fundo-gradient) ;
+    color: var(--cor-primaria);
+    font-family: Arial, Helvetica, sans-serif;
+    cursor:pointer
+}
+
+.fundo{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.interface {
+    position:relative;
+    z-index:1;
+    padding:40px;
+}
+
+.linhas {
+    position:absolute;
+    inset:0;
+    z-index:4;
+    pointer-events:none;
+    background: repeating-linear-gradient( to bottom,rgba(0,0,0,.15),rgba(0,0,0,.15) 2px,transparent 2px,transparent 5px
+    );
+    animation: scanlines 0.50s linear infinite;
+
+}
+
+@keyframes scanlines {
+    from {background-position-y: 0px;
+    }
+    to {background-position-y: 5px;
+    }
+}
+
+header h1{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    font-size: 3.8em;
+    font-family: fantasy;
+    color: var(--cor-primaria);
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+    padding: 2px;
+    background-color: var(--cor-primaria);   
+    margin-bottom: 20px;
+}
+
+nav a {
+    padding: 8px;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-right: 20px;
+}
+
+nav button{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.cardAdicionar{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: center;
+    border: solid 1px var(--cor-primaria);
+    border-radius: var(--radius);
+    width: 35%;
+    margin: 50px auto;
+    background-color: var(--cor-secundaria);
+    padding:30px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    
+}
+
+.cardAdicionar h2{
+    font-size: 1.7em;
+    padding: 10px;
+}
+
+.cardAdicionar input, .cardAdicionar select{
+    width: 100%;
+    padding: 8px;
+    border-radius: var(--radius);
+    margin-bottom: 15px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria)
+}
+
+.cardAdicionar button{
+    padding: 10px;
+    border-radius: var(--radius);
+    margin-bottom: 8px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    font-weight: bold;
+    font-size: 0.9em;
+    justify-content: center;
+}
+
+.biblioteca{
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.filme{
+    width: 220px;
+    background: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+
+}
+
+.filme img{
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.filme h3{
+    margin: 10px 0;
+}
+
+.filme p{
+    margin: 5px 0;
+}
+
+.btn-excluir{
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    background-color: transparent;
+    color: var(--cor-primaria);
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    font-size: 0.9em;
+    margin-top: 20px;
+}

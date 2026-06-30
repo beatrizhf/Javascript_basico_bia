@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locadora Space</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="fundo">
+    <div class="interface">
+
+
+    <header>
+        <h1>Locadora Space</h1> 
+        <nav>
+            <a href="contato.html">Contato</a>
+            <a href="estante.html">Estante</a>
+            <a href="perfil.html">Perfil</a>
+            <button id="theme-toggle"> ☀︎ </button>
+        </nav>
+    </header>
+
+    <main>
+        <form class="cardAdicionar">
+            <h2>Cadastre um filme!</h2>
+
+            <label for="imagemCapa">Capa:</label>
+            <div class="cardImagem">
+                <input
+                    type="file"
+                    id="imagemCapa"
+                    name="imagemCapa"
+                    accept="image/*">
+            </div>
+
+            <label for="tituloFilme">Título:</label>
+            <div class="formDados">
+                <input
+                    type="text"
+                    id="tituloFilme"
+                    name="titulo"
+                    placeholder="Título"
+                    required>
+            </div>
+
+            <label for="generoFilme">Gênero:</label>
+            <div>
+                <select id="generoFilme" name="genero">
+                    <option value="">-</option>
+                    <option value="Ação">Ação</option>
+                    <option value="Aventura">Aventura</option>
+                    <option value="Comédia">Comédia</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Fantasia">Fantasia</option>
+                    <option value="Ficção Científica">Ficção Científica</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Suspense">Suspense</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Animação">Animação</option>
+                </select>
+             </div>
+
+             <label for="dataLancamento">Data de Lançamento:</label>
+             <div>
+                <input 
+                    type="date"
+                    id="dataLancamento"
+                    name="dataLancamento"
+                    required>
+                </div>
+
+                <label for="statusFilme">Status:</label>
+            <div>
+                <select id="statusFilme" name="status" required>
+                    <option value="">-</option>
+                    <option value="Assistindo">Assistindo</option>
+                    <option value="Concluído">Concluído</option>
+                    <option value="Pausado">Pausado</option>
+                </select>
+             </div>
+
+                <label for="avaliacaoFilme">Avaliação:</label>
+                <div>
+                <input
+                    type="number"
+                    id="avaliacaoFilme"
+                    name="avaliacao"
+                    placeholder="(0 a 5)"
+                    min="0"
+                    max="5"
+                    step="0.5">
+                </div>
+
+            <div class="acoes">
+                <button type="button" id="btnAdicionar">
+                    Adicionar Filme
+                </button>
+
+                <button type="reset" id="btnLimpar">Limpar Campos</button>
+            </div>
+        </form>
+
+        <div class="tituloBiblioteca">
+            <h2>Arquivos</h2>
+            <p>Total de filmes cadastrados: <span id="totalFilmes"></span></p>
+        </div>
+        <section class="biblioteca">
+            
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Locadora Space | Beatriz Haiana</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <div class="ruido"></div>
+    <div class="linhas"></div>
+</body>
+
+</html>
